@@ -1,0 +1,118 @@
+body {
+    background-color: #222222;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#game {
+    width: 1200px;
+    height: 600px;
+    background-color: white;
+    border: 5px solid white;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    color: black;
+    z-index: 10;
+}
+
+#left-bar {
+    position: absolute;
+    left: 10px;
+}
+
+#right-bar {
+    position: absolute;
+    right: 10px;
+}
+
+#ball {
+    position: absolute;
+    filter: drop-shadow(0px 0px 10px grey);
+    z-index: 10;
+}
+
+.ball-trail {
+    position: absolute;
+    opacity: 0.6;
+    transition: opacity 0.3s linear, transform 0.3s linear;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#ui-box {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#hit-1, #hit-2, #hit-3 {
+    color: white;
+}
+
+#ui-box span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Hit-Up {
+    transform: rotate(-45deg);
+}
+
+.Hit-Down {
+    transform: rotate(45deg);
+}
+
+#cooldown-tracker {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.cooling-down {
+    animation: flashbw 1s infinite;
+}
+
+@keyframes flashbw {
+    0% {background-color: black; color: white;}
+    50% {background-color: white; color: black;}
+    100% {background-color: black; color: white;}
+}
+
+#left-bar, #right-bar {
+    position: absolute;
+    height: 100px;
+    width: 20px;
+    filter: drop-shadow(0px 0px 15px white);
+    transition: top 0.05s linear, height 0.2s ease;
+}
+
+.powerup-img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+}
+
+.extra-ball {
+    position: absolute;
+    filter: drop-shadow(0px 0px 10px grey );
+    z-index: 9;
+}
